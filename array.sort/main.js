@@ -18,3 +18,19 @@ const compareFn = (a, b) => {
 };
 arr1.sort(compareFn);
 console.log(arr1);
+
+// Another cool usage of the compare function is the following.
+const arr2 = [
+  { id: 394, name: "C***" },
+  { id: 322, name: "a***" },
+  { id: 22, name: "S***" },
+];
+const compareFn2 = (a, b) => {
+  const nameA = a.name.toUpperCase();
+  const nameB = b.name.toUpperCase();
+  if (nameA > nameB) return 1;
+  if (nameA < nameB) return -1;
+  return 0;
+};
+arr2.sort(compareFn2);
+console.log(arr2);
